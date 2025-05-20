@@ -4,26 +4,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Dark Mode Button |Dev Mode</title>
+    <title>BloodSource</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg" href="assets/logo.svg">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- ICONS CDN FONTAWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <!-- ICONS CDN FONTAWESOME-->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-  <div class="btn">
-    <div class="btn__indicator">
-      <div class="btn__icon-container">
-        <i class="btn__icon fa-solid"></i>
+  <div class="main-body">
+    <header>
+      <h1>BloodSource</h1>
+      <div class="btn">
+        <div class="btn__indicator">
+          <div class="btn__icon-container">
+            <i class="btn__icon fa-solid"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="left-section">
+      
+      <dotlottie-player src="https://lottie.host/12f8dccf-98a2-414f-9d4f-8251edad5818/y859QLsMYp.lottie" background="transparent" speed="1" style="width: 500px; height: 500px" loop autoplay></dotlottie-player>
+
+      <h2>Give the Gift of Life</h2>
+      <p>Join our community connecting blood donors with those in need. Simple, fast, and life-saving. Find a center or become a donor today.
+        
+      </p>
+    </section>
+    <section class="right-section">
+      <h2 class="right-section-title">Join Our Life-Saving Mission</h2>
+      <p>We are dedicated to saving lives through blood donation and awareness.</p>
+      <div class="top-buttons">
+        <button type="button" class="nav-btn"><span>Home</span><i class="fa-solid fa-house"></i></button>
+        <button type="button" class="nav-btn"><span>Log In</span><i class="fa-solid fa-right-to-bracket"></i></button>
+        <button type="button" class="nav-btn"><span>Register</span><i class="fa-solid fa-user-plus"></i></button>
+      </div>
+      <div class="divider-login">
+        <span><span class="login-red">Login</span> with Others</span>
+      </div>
+      <div class="social-login-buttons">
+        <button type="button" class="social-btn google">
+          <img src="assets/google.svg" alt="Google" class="social-icon" /> Sign in with Google
+        </button>
+        <button type="button" class="social-btn facebook">
+          <img src="assets/facebook.svg" alt="Facebook" class="social-icon" /> Sign in with Facebook
+        </button>
+        <button type="button" class="social-btn twitter">
+          <img src="assets/twitter.svg" alt="Twitter" class="social-icon" /> Sign in with X
+        </button>
+        <button type="button" class="social-btn apple">
+          <img src="assets/apple.svg" alt="Apple" class="social-icon" /> Sign in with Apple
+        </button>
+      </div>
+
+      <!-- Platform Statistics -->
+      <div class="platform-stats-section">
+  <h3>Platform Statistics</h3>
+  <div class="platform-stats-grid">
+    <div class="stat-card stat-flex">
+      <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+      <div>
+        <div class="stat-number">12,500+</div>
+        <div class="stat-label">Registered Donors</div>
+      </div>
+    </div>
+    <div class="stat-card stat-flex">
+      <div class="stat-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+      <div>
+        <div class="stat-number">8,320+</div>
+        <div class="stat-label">Lives Saved</div>
+      </div>
+    </div>
+    <div class="stat-card stat-flex">
+      <div class="stat-icon"><i class="fa-solid fa-tint"></i></div>
+      <div>
+        <div class="stat-number">520+</div>
+        <div class="stat-label">Blood Drives</div>
+      </div>
+    </div>
+    <div class="stat-card stat-flex">
+      <div class="stat-icon"><i class="fa-solid fa-hospital"></i></div>
+      <div>
+        <div class="stat-number">64+</div>
+        <div class="stat-label">Partner Hospitals</div>
       </div>
     </div>
   </div>
+</div>
 
+      <!-- User Testimonial -->
+      <div class="testimonial-section">
+        <h3>What Users Say</h3>
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="/assets/usersarah.jpg" alt="Sarah Johnson" class="testimonial-avatar">
+            <div>
+              <span class="testimonial-name">Sarah Johnson</span><br>
+              <span class="testimonial-stars">
+                <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD700;"></i>
+              </span>
+            </div>
+          </div>
+          <div class="testimonial-text">
+            "Donating through BloodSource was so easy. Knowing I helped someone directly makes it incredibly rewarding."
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <footer>
+  <div class="footer-content">
+    <span class="footer-icon" aria-label="Robot">
+      <img src="assets/ai.svg" alt="Robot Icon" />
+    </span>
+    <span class="footer-center">© 2023 BloodSource. All rights reserved.</span>
+    <span class="footer-links">
+      <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a>
+    </span>
+  </div>
+</footer>
+  </div>
+
+  <!-- JS -->
   <script src="js/main.js"></script>
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
 </body>
 </html>
