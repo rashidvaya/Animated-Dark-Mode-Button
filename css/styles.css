@@ -756,79 +756,26 @@ body.darkmode .testimonial-text {
   display: block;
   margin: 0 auto 24px auto;
   max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Let the player fill the .lottie-animation container */
+.lottie-animation dotlottie-player {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
 }
 
 /* Tablets */
 @media (max-width: 1023px) {
   .left-section .lottie-animation {
-    width: 250px !important;
-    height: 250px !important;
+    width: 500px !important;
+    height: 500px !important;
     margin: 0 auto 16px auto;
-    max-width: 90vw;
-  }
-}
-
-/* Smartphones */
-@media (max-width: 767px) {
-  .left-section .lottie-animation {
-    width: 120px !important;
-    height: 120px !important;
-    margin: 0 auto 12px auto;
-    max-width: 90vw;
-  }
-}
-
-/* Extra small screens (mobile) */
-@media (max-width: 480px) {
-  .left-section .lottie-animation {
-    width: 80px !important;
-    height: 80px !important;
-    margin: 0 auto 8px auto;
-    max-width: 95vw;
-  }
-}
-
-/* ------------ RESPONSIVE ------------ */
-
-/* Tablets and small laptops */
-@media (max-width: 1023px) {
-  .main-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.15fr 2.5fr 0.15fr;
-    grid-column-gap: 0;
-    grid-row-gap: 0;
-  }
-  .main-body > header,
-  .main-body > footer {
-    grid-column: 1 / -1;
-  }
-  .main-body > .left-section {
-    grid-row: 2;
-    grid-column: 1 / 2;
-    border-right: 1px solid #888;
-    border-bottom: none;
-    padding: 24px 12px;
-    opacity: 0.3;
-    width: 100%;
-    max-width: 100vw;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .main-body > .right-section {
-    grid-row: 2;
-    grid-column: 2 / 3;
-    padding: 24px 12px;
-    width: 100%;
-    max-width: 100vw;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+   
   }
 }
 
@@ -838,18 +785,20 @@ body.darkmode .testimonial-text {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
   }
 
   .main-body > header {
     order: 0;
     width: 100%;
-    padding: 0 5%; /* Added padding for smartphones */
+    padding: 0 5%;
   }
 
   .main-body > .left-section {
     order: 1;
     width: 100%;
-    max-width: 100w;
+    max-width: 100vw;
     padding: 16px 8px;
     margin: 0;
     align-items: center;
@@ -888,6 +837,18 @@ body.darkmode .testimonial-text {
     box-sizing: border-box;
     opacity: 1;
     transform: none;
+    overflow-x: hidden;
+  }
+
+  .right-section p,
+  .right-section-title,
+  .platform-stats-section,
+  .testimonial-section {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .main-body > footer {
@@ -897,13 +858,14 @@ body.darkmode .testimonial-text {
   }
 
   /* Adjust Lottie animation size in left-section for smartphones */
-  .left-section .lottie-container,
-  .left-section lottie-player {
-    width: 120px !important;
-    height: 120px !important;
+  .left-section .lottie-animation {
+    width: 200px !important;
+    height: 200px !important;
+    max-width: 90vw;
+    max-height: 40vh;
     margin: 0 auto 12px auto;
     display: block;
-    max-width: 90vw;
+    box-sizing: border-box;
   }
 }
 
@@ -925,11 +887,13 @@ body.darkmode .testimonial-text {
     padding: 10px 4px;
   }
 
-  .left-section .lottie-container,
-  .left-section lottie-player {
-    width: 80px !important;
-    height: 80px !important;
-    margin: 0 auto 8px auto;
+  .left-section .lottie-animation {
+    width: 140px !important;
+    height: 140px !important;
     max-width: 95vw;
+    max-height: 32vh;
+    margin: 0 auto 8px auto;
+    display: block;
+    box-sizing: border-box;
   }
 }
