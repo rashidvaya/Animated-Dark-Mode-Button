@@ -330,9 +330,42 @@ body.darkmode .left-section p {
   color: var(--text-color-dark);
 }
 
+.left-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: none;
+  /* Animation will be triggered by adding .ease-in */
+}
+
+.left-section.ease-in {
+  animation: leftSectionEaseIn 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes leftSectionEaseIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .main-body > .right-section {
   grid-row: 2;
   grid-column: 3; /* Place in the 3rd column of the 2nd row */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: none;
+  /* Animation will be triggered by adding .ease-in */
+}
+
+.main-body > .right-section.ease-in {
+  animation: rightSectionEaseIn 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes rightSectionEaseIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .main-body > .right-section .top-buttons {
@@ -707,4 +740,27 @@ body.darkmode .testimonial-text {
   }
 
   /* ...rest of your responsive styles... */
+}
+
+.floating-robot {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s;
+}
+.floating-robot img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.floating-robot:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }

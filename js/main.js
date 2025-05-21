@@ -25,6 +25,16 @@ function load(){
   }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const leftSection = document.querySelector('.left-section');
+  if (leftSection) {
+    leftSection.classList.add('ease-in');
+  }
+  const rightSection = document.querySelector('.main-body > .right-section');
+  if (rightSection) {
+    rightSection.classList.add('ease-in');
+  }
+});
 
 load();
 
