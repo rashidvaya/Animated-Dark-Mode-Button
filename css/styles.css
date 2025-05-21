@@ -497,7 +497,7 @@ button:hover span:after {
   text-align: center;
   margin: 32px 0 24px 0;
   width: 100%;
-  color: var(--text-color);
+  color: var(--light-color);
   font-weight: 500;
   font-size: 1.1rem;
   letter-spacing: 0.01em;
