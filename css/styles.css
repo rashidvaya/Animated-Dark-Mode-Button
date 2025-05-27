@@ -583,6 +583,23 @@ button:hover span:after {
   transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Ensure nav-btn text is centered before hover */
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center text and icon horizontally */
+  gap: 6px; /* Space between text and icon */
+  position: relative;
+}
+
+.nav-btn span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Center text inside span */
+  width: 100%;
+  text-align: center;
+}
+
 /* -------------- DIVIDER -------------- */
 .divider-login {
   display: flex;
@@ -731,11 +748,42 @@ button:hover span:after {
 body.darkmode .platform-stats-section h3 {
   color: var(--text-color-dark);
 }
+
+/* Platform Stats: Always 2 columns, 2 rows, responsive */
 .platform-stats-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
+  width: 100%;
 }
+
+/* On all screens, keep 2 columns and 2 rows */
+@media (max-width: 1023px) {
+  .platform-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.7rem;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .platform-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.7rem;
+    width: 100%;
+  }
+  .stat-card {
+    min-width: 0;
+    width: 100%;
+    padding: 1rem 0.5rem;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: left;
+  }
+}
+
 .stat-card {
   background: #fafbfc;
   border-radius: 10px;
