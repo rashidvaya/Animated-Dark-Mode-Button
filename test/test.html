@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BloodSource - Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/test/style.css">
+</head>
+<body class="content-loading">
+
+    <div class="skeleton-loader">
+        <div class="skeleton-header">
+            <div class="skeleton-logo skeleton-element"></div>
+            <div class="skeleton-controls">
+                <div class="skeleton-control-item skeleton-element"></div>
+                <div class="skeleton-control-item circle skeleton-element"></div>
+            </div>
+        </div>
+        <div class="skeleton-main-content">
+            <div class="skeleton-left-section">
+                <div class="skeleton-hero-svg skeleton-element"></div>
+                <div class="skeleton-line large skeleton-element"></div>
+                <div class="skeleton-line medium skeleton-element"></div>
+                <div class="skeleton-line medium skeleton-element"></div>
+                <div class="skeleton-line small mt-large skeleton-element"></div>
+            </div>
+            <div class="skeleton-right-section">
+                <div class="skeleton-line large mb-small skeleton-element"></div>
+                <div class="skeleton-line medium mb-large skeleton-element"></div>
+                <div class="skeleton-nav-buttons">
+                    <div class="skeleton-block button skeleton-element"></div>
+                    <div class="skeleton-block button skeleton-element"></div>
+                    <div class="skeleton-block button skeleton-element"></div>
+                </div>
+                <div class="skeleton-separator skeleton-element"></div>
+                <div class="skeleton-block social-button skeleton-element"></div>
+                <div class="skeleton-block social-button skeleton-element"></div>
+                <div class="skeleton-block social-button skeleton-element"></div>
+                <div class="skeleton-block social-button skeleton-element"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <a href="#home" class="logo">BloodSource</a>
+        <div class="header-controls">
+            <span style="font-size: 0.9rem; color: var(--text-color-light); margin-right: 10px;">
+                <i class="fa-solid fa-shield-heart" style="color: var(--accent-color);"></i> Hero Level
+            </span>
+            <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="left-section">
+            <div id="home-page" class="page active">
+                <div class="hero-content">
+                    <div class="hero-svg">
+                        <dotlottie-player
+                            src="https://lottie.host/c2fdd210-e2c9-4323-be22-3958ca4fe8ef/r6lbQ4vPP8.lottie"
+                            background="transparent"
+                            speed="1"
+                            style="width: 300px; height: 300px"
+                            loop
+                            autoplay>
+                        </dotlottie-player>
+                    </div>
+                    <h1>Give the Gift of Life</h1>
+                    <p>
+                        Join our community connecting blood donors with those in need.
+                        Simple, fast, and life-saving. Find a center or become a donor today.
+                    </p>
+                    <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--text-color-light);">
+                        <i class="fa-solid fa-location-dot" style="color: var(--primary-color);"></i>
+                        Nearby donation centers will appear here after login.
+                    </p>
+                </div>
+            </div>
+
+            <div id="login-page" class="page form-page">
+                <div class="card card-transparent">
+                    <h2>Hi, Welcome Back <span role="img" aria-label="waving hand">👋</span></h2>
+                    <p class="login-subtitle">It's great to see you again.</p>
+                    <form action="#" method="post" novalidate id="login-form">
+                        <div class="form-group">
+                            <span class="input-icon"><i class="fas fa-user"></i></span>
+                            <input type="text" id="login-username" name="username" required placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <span class="input-icon"><i class="fas fa-lock"></i></span>
+                            <input type="password" id="login-password" name="password" required placeholder="Password">
+                            <span class="password-toggle-icon" id="loginPasswordToggle"><i class="fas fa-eye"></i></span>
+                        </div>
+                        <div class="form-actions">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="remember-me" name="remember">
+                                <label for="remember-me">Remember me</label>
+                            </div>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="submit-btn">Log In</button>
+                    </form>
+                    <p class="login-signup-link">
+                        Don't have an account! Go to The Register Section <span role="img" aria-label="Smiling Face with Smiling Eyes">😊</span>
+                    </p>
+                </div>
+            </div>
+
+            <div id="signup-page" class="page form-page">
+                <div class="card">
+                    <div class="progress-indicator" aria-label="Signup Progress">
+                        <div class="progress-step active">
+                            <div class="step-circle" aria-hidden="true">1</div>
+                            <div class="step-label">Account</div>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-circle" aria-hidden="true">2</div>
+                            <div class="step-label">Details</div>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-circle" aria-hidden="true">3</div>
+                            <div class="step-label">Confirm</div>
+                        </div>
+                    </div>
+                    <h2>Create Your Account</h2>
+                    <form action="#" method="post" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="signup-fullname" name="fullname" required placeholder="Full Name">
+                            <label for="signup-fullname">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="signup-email" name="email" required placeholder="Email Address">
+                            <label for="signup-email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="signup-password" name="password" required minlength="8" placeholder="Password (min 8 chars)">
+                            <label for="signup-password">Password</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="signup-confirm-password" name="confirm_password" required placeholder="Confirm Password">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">I agree to the <a href="#" target="_blank">Terms and Conditions</a></label>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="right-section">
+            <div class="card right-section-card card-transparent">
+                <h2 class="mission-title">Join our life-saving mission.</h2>
+                <p class="mission-subtitle">Sign in or create an account to find or become a blood donor.</p>
+                <nav class="section-nav">
+                    <button id="home-btn" data-target="home-page" class="btn-secondary">Home</button>
+                    <button id="login-btn" data-target="login-page" class="btn-secondary">Log In</button>
+                    <button id="signup-btn" data-target="signup-page" class="btn-secondary">Register</button>
+                </nav>
+                <div class="or-separator">
+                    <span class="or-text-bold">Login</span><span class="or-text-regular">with Others</span>
+                </div>
+                <div class="social-logins">
+                    <a href="#" class="social-btn google">
+                        <img src="/assets/google.svg" alt="Google" class="social-icon" />
+                        <span>Sign in with Google</span>
+                    </a>
+                    <a href="#" class="social-btn facebook">
+                        <img src="/assets/facebook.svg" alt="Facebook" class="social-icon" />
+                        <span>Sign in with Facebook</span>
+                    </a>
+                    <a href="#" class="social-btn x-twitter">
+                        <img src="/assets/twitter.svg" alt="X" class="social-icon" />
+                        <span>Sign in with X</span>
+                    </a>
+                    <a href="#" class="social-btn apple">
+                        <img src="/assets/apple.svg" alt="Apple" class="social-icon" />
+                        <span>Sign in with Apple</span>
+                    </a>
+                </div>
+                <div class="stats-section">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-hand-holding-droplet" style="color: var(--primary-color); font-size: 2rem;"></i>
+                        </div>
+                        <div class="stat-text">
+                            <span class="stat-number">12,438</span>
+                            <span class="stat-label">donors connected</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-heart-pulse" style="color: var(--accent-color); font-size: 2rem;"></i>
+                        </div>
+                        <div class="stat-text">
+                            <span class="stat-number">5,729</span>
+                            <span class="stat-label">lives impacted</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card impact-card card-transparent">
+                <h3>Donor Spotlight</h3>
+                <blockquote>
+                    "Donating through BloodSource was so easy. Knowing I helped someone directly makes it incredibly rewarding."
+                </blockquote>
+                <p class="author">- Sarah K., 3rd Time Donor</p>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>
+            © 2023 BloodSource. All rights reserved.
+            <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a>
+        </p>
+    </footer>
+    <button class="ai-assistant-button" aria-label="Open AI Assistant">
+        <i class="fa-solid fa-comment-dots"></i>
+    </button>
+    <script src="/test/main.js"></script>
+</body>
+</html>

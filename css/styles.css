@@ -82,13 +82,10 @@ header h1 {
 /* Responsive: Small Tablets & Large Mobiles (≤767px) */
 @media (max-width: 767px) {
   header {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 8px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    gap: 8px;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
   }
 }
 
@@ -100,6 +97,29 @@ header h1 {
     margin-top: 4px;
     margin-bottom: 4px;
     gap: 6px;
+  }
+}
+
+/* Responsive header for smartphone mode - keep header content in one line */
+@media (max-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: row;      /* Ensure items are in a row */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    gap: 0;
+    flex-wrap: nowrap;        /* Prevent wrapping to next line */
+  }
+  header h1 {
+    font-size: 1.1rem;
+    margin: 0;
+    white-space: nowrap;      /* Prevent title from breaking */
+  }
+  .btn {
+    margin-left: 0;
   }
 }
 
@@ -943,5 +963,37 @@ body.darkmode .testimonial-text {
   .floating-robot {
     left: 2px;
     bottom: 2px;
+  }
+}
+
+/* Responsive: Top buttons in right-section */
+@media (max-width: 600px) {
+  .main-body > .right-section .top-buttons {
+    flex-direction: row !important;
+    gap: 8px;
+    width: 100%;
+    margin: 16px 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-body > .right-section .nav-btn {
+    width: auto;
+    min-width: 0;
+    font-size: 1rem;
+    padding: 10px 12px;
+    flex: 1 1 0;
+    max-width: 120px;
+  }
+}
+
+/* Even more compact for very small screens */
+@media (max-width: 400px) {
+  .main-body > .right-section .top-buttons {
+    gap: 6px;
+    margin: 10px 0;
+  }
+  .main-body > .right-section .nav-btn {
+    font-size: 0.95rem;
+    padding: 10px 0;
   }
 }
